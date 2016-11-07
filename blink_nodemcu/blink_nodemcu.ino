@@ -49,9 +49,10 @@ void handleOn()
   const char *plainHtml = 
   "<head>"
   "<style> html, body { height: 100vh } </style>"
-  "<script> function myClick() { window.location.href = '/off'; } </script>"
+  "<style> body { background-color: #02BDAD </style>"
+  "<script> function action() { window.location.href = '/off'; } </script>"
   "</head>"
-  "<body style='background-color: #02BDAD;', onclick=myClick()></body>";
+  "<body onclick='action()' ontouchstart='action()'></body>";
   
   server.send(200, "text/html", plainHtml);
 }
@@ -64,9 +65,10 @@ void handleOff()
   const char *plainHtml = 
   "<head>"
   "<style> html, body { height: 100vh } </style>"
-  "<script> function myClick() { window.location.href = '/on'; } </script>"
+  "<style> body { background-color: gray </style>"
+  "<script> function action() { window.location.href = '/on'; } </script>"
   "</head>"
-  "<body style='background-color: gray;', onclick=myClick()></body>";
+  "<body onclick='action()' ontouchstart='action()'></body>";
   
   server.send(200, "text/html", plainHtml);
 }
