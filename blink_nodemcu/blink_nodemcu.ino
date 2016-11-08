@@ -49,7 +49,7 @@ void handleOn()
   const char *plainHtml = 
   "<head>"
   "<style> html, body { height: 100vh } </style>"
-  "<style> body { background-color: #02BDAD </style>"
+  "<style> body { background-color: #02BDAD } </style>"
   "<script> function action() { window.location.href = '/off'; } </script>"
   "</head>"
   "<body onclick='action()' ontouchstart='action()'></body>";
@@ -65,7 +65,7 @@ void handleOff()
   const char *plainHtml = 
   "<head>"
   "<style> html, body { height: 100vh } </style>"
-  "<style> body { background-color: gray </style>"
+  "<style> body { background-color: gray } </style>"
   "<script> function action() { window.location.href = '/on'; } </script>"
   "</head>"
   "<body onclick='action()' ontouchstart='action()'></body>";
