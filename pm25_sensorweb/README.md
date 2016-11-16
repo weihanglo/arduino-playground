@@ -1,6 +1,7 @@
 # PM 2.5 Station for Project SensorWeb
 
 **Project SensorWeb** is a crowdsourcing sensor network by Mozilla. 
+
 For more information, visit [Project SensorWeb: PM 2.5 in Taiwan][pm25].
 
 ## Things to Learn
@@ -11,7 +12,7 @@ For more information, visit [Project SensorWeb: PM 2.5 in Taiwan][pm25].
 
 ## Hardwares & Accessories Requirements
 
-- [NodeMCU][modemcu]
+- [NodeMCU][nodemcu]
 - Plantower [PMS5003][5003] Dust Sensor ([product manual][manual])
 
 ## Software Environment

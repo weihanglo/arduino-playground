@@ -8,7 +8,7 @@
 
 ## Hardwares & Accessories Requirements
 
-- [NodeMCU][modemcu]
+- [NodeMCU][nodemcu]
 
 ## Software Environment
 
