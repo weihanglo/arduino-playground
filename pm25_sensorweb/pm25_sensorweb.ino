@@ -47,10 +47,6 @@ void loop() {
 
     while (Serial.available()) {
 
-        // Consume all available imcoming data
-        if (index > 15)
-            continue;
-
         low = Serial.read();
 
         // Check Start byte
@@ -72,8 +68,15 @@ void loop() {
         if (i == 15)
             pm10 = high + low;
 
+        if (index > 15)
+            break;
+
         index++;
     }
+
+    // Clear ongoing serial buffer
+    while (Serial.available()) 
+        Serial.read();
 
     Serial.println();
     Serial.printf("{ pm1: %u, pm2.5: %u, pm10: %u }", pm1, pm2_5, pm10);
@@ -89,5 +92,5 @@ void loop() {
     http.writeToStream(&Serial);
     http.end();
 
-    delay(10000);
+    delay(30000);
 }
