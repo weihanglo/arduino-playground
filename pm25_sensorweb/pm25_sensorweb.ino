@@ -36,7 +36,7 @@ void setup()
     }
 
     Serial.println();
-    Serial.println("Wi-Fi connected.");
+    Serial.println("Wi-Findex connected.");
 }
 
 void loop() {
@@ -50,22 +50,22 @@ void loop() {
         low = Serial.read();
 
         // Check Start byte
-        if ((i == 0 && low != 0x42) || (i == 1 && low != 0x4d)) {
+        if ((index == 0 && low != 0x42) || (index == 1 && low != 0x4d)) {
             Serial.println("Start byte not found.");
             break;
         }
 
         // Shift high-order byte
-        if (i == 10 || i == 12 || i == 14)
+        if (index == 10 || index == 12 || index == 14)
             high = low << 8;
 
-        if (i == 11) 
+        if (index == 11) 
             pm1 = high + low;
         
-        if (i == 13)
+        if (index == 13)
             pm2_5 = high + low;
 
-        if (i == 15)
+        if (index == 15)
             pm10 = high + low;
 
         if (index > 15)
